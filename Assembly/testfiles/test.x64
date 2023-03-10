@@ -1,0 +1,17 @@
+MOVQ $1, %r9
+MOVQ $2, %r10
+MOVQ $3, %r11
+MOVQ $4, %r12
+MOVQ $5, %r13
+MOVQ $6, %r14
+MOVQ $7, %r15
+cmpq %r10, %r11
+je equal
+ADDQ %r10, %r11
+equal:
+SUBQ %r12, %r13
+jne nequal
+ANDQ %r9, %r10
+nequal:
+XORQ %r11, %r12
+HLT

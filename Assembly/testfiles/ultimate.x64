@@ -1,0 +1,49 @@
+start:
+  movq stack, %rsp
+  movq $1, %r10
+  movq $2, %r11
+  movq $3, %r12
+  pushq %r12
+  pushq %r11
+  pushq %r10
+  popq %r13
+  popq %r14
+  popq %r15
+  addq %r12, %r15
+  addq %r12, %r14
+  subq %r10, %r14
+  movq %r14, %r13
+  addq %r10, %r13
+  pushq %r14
+  cmovg %r13, %r14
+  popq %r13
+  cmpq %r10, %r15
+  jg andxor
+  movq $105, %r15
+
+back:
+  call changerax
+  NOP
+  NOP
+  NOP
+  jmp end
+
+andxor:
+  movq $15, %r8
+  movq $20, %r9
+  xorq %r8, %r9
+  andq %r9, %r8
+  jmp back
+
+
+changerax:
+  movq $255, %rax
+  ret
+
+end:
+  hlt
+
+
+.pos 0x100
+stack:
+  .quad 100

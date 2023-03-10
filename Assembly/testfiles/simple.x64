@@ -1,0 +1,7 @@
+// Simple Push
+movq stack, %rsp
+movq $10, %r14
+pushq %r14
+
+.pos 0x100
+stack:

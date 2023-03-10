@@ -1,0 +1,4 @@
+    movq $3, %r14
+    movq $4, %r10
+    cmove %r14, %r10
+    addq %r10, %r14

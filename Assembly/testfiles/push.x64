@@ -1,0 +1,9 @@
+movq stack, %rsp
+movq $25, %r14
+pushq %r14
+pushq %r14
+movq %rax, %r15
+hlt
+
+.pos 0x100
+stack:

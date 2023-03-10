@@ -1,0 +1,4 @@
+movq $31, %r15
+movq %r15, 8(%r14)
+movq 8(%r14), %r12
+hlt

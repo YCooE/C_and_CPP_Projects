@@ -1,0 +1,11 @@
+movq $3, %r14
+movq $4, %r10
+addq %r14, %r10
+cmovg %r10, %r14
+cmpq %r10, %r14
+cmovl %r10, %r14
+movq $5, %r11
+xorq %r11, %r14
+cmovne %r11, %r10
+movq $3, %r9
+cmove %r9, %r14

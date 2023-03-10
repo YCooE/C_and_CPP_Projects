@@ -1,0 +1,18 @@
+movq $31, %r14
+movq $1, %r15
+subq %r15, %r14
+jmp next
+next:
+    cmpq %r9, %r8
+    je now
+now:
+    cmpq %r14, %r15
+    jne okay
+okay:
+    addq %r10, %r11
+    jmp hey
+hey:
+    jl no
+    hlt
+no:
+    hlt

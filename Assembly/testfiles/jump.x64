@@ -1,0 +1,4 @@
+jmp next
+movq $1, %r10
+next:
+movq $2, %r11

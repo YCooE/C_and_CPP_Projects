@@ -1,0 +1,3 @@
+    movq %r14, %r15
+    nop
+    hlt
