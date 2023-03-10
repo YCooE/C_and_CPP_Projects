@@ -1,2 +1,2 @@
-# C_and_CPP_Projects
+# C and CPP Projects
 History of small projects written in C and CPP
